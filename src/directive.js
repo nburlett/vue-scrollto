@@ -58,10 +58,11 @@ const directiveHooks = {
   unbind(el) {
     deleteBinding(el)
     _.off(el, 'click', handleClick)
+    _.unmount(el)
   },
   update(el, binding) {
     getBinding(el).binding = binding
-  }
+  },
 }
 
 export default {

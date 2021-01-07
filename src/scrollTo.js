@@ -242,6 +242,7 @@ export const scroller = () => {
       abort = true
     }
   }
+  scrollTo.unmount = elm => _.unmount(elm)
 
   return scrollTo
 }
